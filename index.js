@@ -15,6 +15,7 @@ function gulpFunnel(opt) {
   attr = opt.attr || "data-et-tag";
   template = opt.template;
   dest = opt.dest;
+  cwd = opt.cwd || process.cwd();
   userTransform = opt.transform;
   globOption = {};
 
@@ -74,23 +75,23 @@ function gulpFunnel(opt) {
       //
       for (var i = 0, len = templateFilePaths.length; i < len; i++) {
         // template
-        templateFilePath = path.join(__dirname, templateFilePaths[i]);
+        templateFilePath = path.join(cwd, templateFilePaths[i]);
         base = path.basename(templateFilePath);
 
         templateFile = new gutil.File({
           base: base,
-          cwd: __dirname,
+          cwd: cwd,
           path: templateFilePath,
           contents: fs.readFileSync(templateFilePath)
         });
 
         // dest
         // [FIXME] modify userTransform to be asynchronous
-        destFilePath = path.join(__dirname, dest, base);
+        destFilePath = path.join(cwd, dest, base);
 
         destFile = new gutil.File({
           base: base,
-          cwd: __dirname,
+          cwd: cwd,
           path: destFilePath,
           contents: Buffer( userTransform(templateFile.contents, param) )
         });
