@@ -1,0 +1,34 @@
+{
+  "name": "gulp-funnel",
+  "version": "0.0.0",
+  "description": "Gulp plugin to funnel contents into other files.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "cheerio": "~0.16.0",
+    "glob": "~4.0.0",
+    "gulp": "~3.6.2",
+    "gulp-util": "~2.2.14",
+    "mustache": "~0.8.1",
+    "through2": "~0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oimou/gulp-funnel.git"
+  },
+  "keywords": [
+    "gulpplugin"
+  ],
+  "author": "oimou <s1190013@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oimou/gulp-funnel/issues"
+  },
+  "homepage": "https://github.com/oimou/gulp-funnel"
+}

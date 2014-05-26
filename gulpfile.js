@@ -1,11 +1,19 @@
 var gulp = require("gulp");
-var extract = require("./index");
+var funnel = require("./index");
+var mustache = require("mustache");
 
-gulp.task("extract", function() {
+gulp.task("funnel", function() {
   gulp
     .src("./example/*.html")
-    .pipe(extract())
-    .pipe(gulp.dest("./dest"));
+    .pipe(funnel({
+      attr: "data-et-tag",
+      transform: function (template, param) {
+        return mustache.render(template.toString(), param);
+      },
+      template: "template/*.html",
+      dest: "dest"
+    }))
+    .pipe(gulp.dest("dest"));
 });
 
-gulp.task("default", ["extract"]);
+gulp.task("default", ["funnel"]);
