@@ -22,9 +22,7 @@
     "type": "git",
     "url": "git://github.com/oimou/gulp-funnel.git"
   },
-  "keywords": [
-    "gulpplugin"
-  ],
+  "keywords": [],
   "author": "oimou <s1190013@gmail.com>",
   "license": "MIT",
   "bugs": {
