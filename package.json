@@ -1,7 +1,7 @@
 {
   "name": "gulp-funnel",
   "version": "0.0.3",
-  "description": "Gulp plugin to funnel contents into other files.",
+  "description": "Funnel contents into other files.",
   "main": "index.js",
   "directories": {
     "example": "example"

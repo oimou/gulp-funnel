@@ -1,6 +1,6 @@
 # gulp-funnel
 
-Gulp plugin to funnel contents into other files.
+Funnel contents into other files.
 
 # LICENSE
 
