@@ -1,6 +1,6 @@
 {
   "name": "gulp-funnel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gulp plugin to funnel contents into other files.",
   "main": "index.js",
   "directories": {
@@ -14,9 +14,12 @@
     "mustache": "~0.8.1",
     "through2": "~0.4.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^1.19.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
